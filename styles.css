@@ -1,0 +1,38 @@
+* {
+    background-color: black;
+    color: white;
+}
+header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px; 
+    background: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 150%;
+    border: 5px dotted white; 
+}
+.Content {
+    display: flex;
+    padding: 5%;
+    margin: auto;
+    font-size: 150%;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: space-between;
+}
+.Flex1 {
+    display: flex;
+    padding: 5%;
+    font-size: 90%;
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+}
+.Flex2 {
+    display: flex;
+    padding: 5%;
+    font-size: 90%;
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+}
