@@ -9,18 +9,55 @@
         <div class="Content">
 
             <div class="Flex1">
-                <label for="entrybox1">Its time to organize your tasks. Lets make a list</label>
-                <input type="text" id="taskbox" placeholder="Type your tasks here">
-                <button id="mybtn">Click Me</button>
+                <label for="entrybox1">Its time to organize your tasks. Lets make a list</label><br>
+                <input type="text" id="taskbox" placeholder="Type your tasks here"><br>
+                <button id="mybtn">Click to Add To Your List</button>
             </div>
 
             <div class="Flex2">
                 <label for="entrybox2">Your entered Tasks</label>
-                <ul id="Task List"></ul>
+                <ul id="taskList"></ul>
             </div>
             </div>
+
             <script>
-                document.addEventListener('task')
+                const taskbox = document.getElementById('taskbox');
+                const mybtn = document.getElementById('mybtn');
+                const taskList = document.getElementById('taskList');
+                mybtn.addEventListener('click', () => {
+                    const taskText = taskbox.value.trim();
+                    if (taskText !== '') {
+                        addTask(taskText);
+                        taskInput.value = '';
+                    }
+                    
+                })
+                function addTask(taskText) {
+                const li = document.createElement('li');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                const taskSpan = document.createElement('span');
+                taskSpan.textContent = taskText;
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Delete';
+
+                li.appendChild(checkbox);
+                li.appendChild(taskSpan);
+                li.appendChild(deleteBtn);
+                taskList.appendChild(li);
+
+                checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    taskSpan.classList.add('completed');
+                    } else {
+                    taskSpan.classList.remove('completed');
+                    }
+                });
+
+                deleteBtn.addEventListener('click', () => {
+                taskList.removeChild(li);
+                });
+            }   
             </script>
     </body>
 </html>

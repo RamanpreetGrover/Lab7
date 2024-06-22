@@ -12,15 +12,18 @@ header {
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 150%;
-    border: 5px dotted white; 
+    border: 3px dashed white; 
 }
 .Content {
     display: flex;
-    padding: 5%;
-    margin: auto;
-    font-size: 150%;
-    font-family: 'Courier New', Courier, monospace;
     justify-content: space-between;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1b1b1b;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(105, 105, 105, 0.1);
+    font-size: 150%;
 }
 .Flex1 {
     display: flex;
@@ -28,6 +31,8 @@ header {
     font-size: 90%;
     font-family: 'Courier New', Courier, monospace;
     flex-direction: column;
+    border-style: dashed;
+
 }
 .Flex2 {
     display: flex;
@@ -35,4 +40,31 @@ header {
     font-size: 90%;
     font-family: 'Courier New', Courier, monospace;
     flex-direction: column;
+    border: dashed white;
+}
+button {
+    padding: 8px 16px;
+    background-color: #000000;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 90%;
+
+}
+      
+button:hover {
+    background-color: #3498db;
+
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
 }
