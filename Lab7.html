@@ -39,7 +39,7 @@
                 const taskSpan = document.createElement('span');
                 taskSpan.textContent = taskText;
                 const deleteBtn = document.createElement('button');
-                deleteBtn.textContent = 'Delete';
+                deleteBtn.innerText = '❌';
 
                 li.appendChild(checkbox);
                 li.appendChild(taskSpan);
@@ -57,7 +57,7 @@
                 deleteBtn.addEventListener('click', () => {
                 taskList.removeChild(li);
                 });
-            }   
+                }   
             </script>
     </body>
 </html>
